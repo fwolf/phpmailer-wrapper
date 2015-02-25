@@ -107,7 +107,7 @@ class PHPMailer extends OriginalPHPMailer
      *
      * Parse string including email name and address to address=>name array.
      *
-     * @var string  $address
+     * @param   string  $address
      * @return  array
      */
     public function parseAddress($address)
