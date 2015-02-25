@@ -1,9 +1,9 @@
 <?php
-namespace FwolfTest\Wrapper\PHPUnit;
+namespace FwolfTest\Wrapper\PHPMailer;
 
 /**
  * @copyright   Copyright 2013-2015 Fwolf
- * @license     http://opensource.org/licenses/MIT  MIT
+ * @license     http://opensource.org/licenses/MIT MIT
  */
 class PHPMailerTest extends \PHPUnit_Framework_TestCase
 {

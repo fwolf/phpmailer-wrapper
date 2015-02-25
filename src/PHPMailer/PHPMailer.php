@@ -10,7 +10,7 @@ namespace Fwolf\Wrapper\PHPMailer;
  * Property with StudlyCaps name are inherited from parent class.
  *
  * @copyright   Copyright 2007-2015 Fwolf
- * @license     http://opensource.org/licenses/MIT  MIT
+ * @license     http://opensource.org/licenses/MIT MIT
  */
 class PHPMailer extends \PHPMailer
 {
