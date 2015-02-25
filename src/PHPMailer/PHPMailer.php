@@ -31,20 +31,6 @@ class PHPMailer extends OriginalPHPMailer
     public $Encoding = 'base64';
 
     /**
-     * Error count, reset when mail send success
-     *
-     * @var int
-     */
-    protected $errorCount = 0;
-
-    /**
-     * Error message, reset when mail send success
-     *
-     * @var string
-     */
-    protected $errorMessage = '';
-
-    /**
      * Mail from address, overwrite parent default value
      *
      * @var string
@@ -78,6 +64,20 @@ class PHPMailer extends OriginalPHPMailer
      * @var boolean
      */
     public $SMTPAuth = true;
+
+    /**
+     * Error count, reset when mail send success
+     *
+     * @var int
+     */
+    protected $errorCount = 0;
+
+    /**
+     * Error message, reset when mail send success
+     *
+     * @var string
+     */
+    protected $errorMessage = '';
 
 
     /**
