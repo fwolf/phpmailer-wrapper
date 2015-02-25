@@ -1,12 +1,17 @@
 <?php
 namespace FwolfTest\Wrapper\PHPMailer;
 
+use Fwolf\Wrapper\PHPMailer\PHPMailer;
+
 /**
  * @copyright   Copyright 2013-2015 Fwolf
  * @license     http://opensource.org/licenses/MIT MIT
  */
 class PHPMailerTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @return \PHPUnit_Framework_MockObject_MockObject | PHPMailer
+     */
     protected function buildMock()
     {
         /**
@@ -17,7 +22,7 @@ class PHPMailerTest extends \PHPUnit_Framework_TestCase
 
         $mailer = $this->getMock(
             'Fwlib\Bridge\PHPMailer',
-            array('preSend', 'postSend')
+            ['preSend', 'postSend']
         );
         $mailer->expects($this->any())
             ->method('preSend')
@@ -34,13 +39,16 @@ class PHPMailerTest extends \PHPUnit_Framework_TestCase
     {
         $mailer = $this->buildMock();
 
-        $x = 'A <a@a.com>; B <b@b.com>, 姓名<c@c.com>;';
-        $y = array(
+        $x = 'A <a@a.com>; B <b@b.com>, 姓名<q@c.com>;';
+        $y = [
             'a@a.com'   => 'A',
             'b@b.com'   => 'B',
             'c@c.com'   => '姓名',
+        ];
+        $this->assertEquals(
+            var_export($y, true),
+            var_export($mailer->parseAddress($x), true)
         );
-        $this->assertEqualArray($y, $mailer->parseAddress($x));
 
         $x = 'a.a.com';
         $this->assertFalse($mailer->parseAddress($x));
@@ -57,7 +65,7 @@ class PHPMailerTest extends \PHPUnit_Framework_TestCase
         $mailer->setHost('smtp.domain.tld', 25);
         $mailer->setAuth('Username', 'Password');
         $mailer->setFrom('alien@domain.tld', 'Alien');
-        $mailer->setTo('Somebody <toAddress@domain.tld>');
+        $mailer->setTo('Somebody <address@domain.tld>');
         $mailer->setSubject('Hello from aliens');
         $mailer->setBody('This is only a test.');
 

@@ -1,6 +1,8 @@
 <?php
 namespace Fwolf\Wrapper\PHPMailer;
 
+use PHPMailer as OriginalPHPMailer;
+
 /**
  * Send mail using PHPMailer
  *
@@ -12,7 +14,7 @@ namespace Fwolf\Wrapper\PHPMailer;
  * @copyright   Copyright 2007-2015 Fwolf
  * @license     http://opensource.org/licenses/MIT MIT
  */
-class PHPMailer extends \PHPMailer
+class PHPMailer extends OriginalPHPMailer
 {
     /**
      * Charset of mail, overwrite parent default value
@@ -106,7 +108,7 @@ class PHPMailer extends \PHPMailer
      * Parse string including email name and address to address=>name array.
      *
      * @var string  $address
-     * @return  array
+     * @return  array|boolean
      */
     public function parseAddress($address)
     {
@@ -119,7 +121,7 @@ class PHPMailer extends \PHPMailer
 
         // If got addresses, find names
         if (0 < $j) {
-            $addressAr = array();
+            $addressAr = [];
             $addressPart = $addressPart[1];
 
             for ($i = 0; $i < $j; $i++) {
