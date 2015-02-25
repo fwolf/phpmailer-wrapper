@@ -108,7 +108,7 @@ class PHPMailer extends OriginalPHPMailer
      * Parse string including email name and address to address=>name array.
      *
      * @var string  $address
-     * @return  array|boolean
+     * @return  array
      */
     public function parseAddress($address)
     {
@@ -140,7 +140,7 @@ class PHPMailer extends OriginalPHPMailer
             return($addressAr);
 
         } else {
-            return false;
+            return [];
         }
     }
 

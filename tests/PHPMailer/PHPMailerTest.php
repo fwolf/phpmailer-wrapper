@@ -51,7 +51,7 @@ class PHPMailerTest extends \PHPUnit_Framework_TestCase
         );
 
         $x = 'a.a.com';
-        $this->assertFalse($mailer->parseAddress($x));
+        $this->assertEmpty($mailer->parseAddress($x));
     }
 
 
