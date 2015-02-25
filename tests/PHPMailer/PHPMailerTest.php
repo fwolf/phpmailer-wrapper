@@ -21,7 +21,7 @@ class PHPMailerTest extends \PHPUnit_Framework_TestCase
          */
 
         $mailer = $this->getMock(
-            'Fwlib\Bridge\PHPMailer',
+            'Fwolf\Wrapper\PHPMailer\PHPMailer',
             ['preSend', 'postSend']
         );
         $mailer->expects($this->any())
@@ -43,7 +43,7 @@ class PHPMailerTest extends \PHPUnit_Framework_TestCase
         $y = [
             'a@a.com'   => 'A',
             'b@b.com'   => 'B',
-            'c@c.com'   => '姓名',
+            'q@c.com'   => '姓名',
         ];
         $this->assertEquals(
             var_export($y, true),

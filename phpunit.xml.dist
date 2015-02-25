@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<phpunit
+  backupGlobals='false'
+  backupStaticAttributes='false'
+  beStrictAboutOutputDuringTests='true'
+  beStrictAboutTestSize='true'
+  beStrictAboutTestsThatDoNotTestAnything='true'
+  bootstrap='bootstrap.php'
+  checkForUnintentionallyCoveredCode='true'
+  colors='true'
+  convertErrorsToExceptions='true'
+  convertNoticesToExceptions='true'
+  convertWarningsToExceptions='true'
+  forceCoversAnnotation='false'
+  mapTestClassNameToCoveredClassName='false'
+  processIsolation='false'
+  stopOnError='false'
+  stopOnFailure='false'
+  stopOnIncomplete='false'
+  stopOnSkipped='false'
+  timeoutForSmallTests='10'
+  timeoutForMediumTests='30'
+  timeoutForLargeTests='60'
+  verbose='false'
+>
+
+  <testsuites>
+    <testsuite name='Fwlib Test Suite'>
+      <directory phpVersion='5.3.0' phpVersionOperator='>='
+        >tests/</directory>
+    </testsuite>
+  </testsuites>
+
+  <groups>
+    <exclude>
+      <group>benchmark</group>
+      <group>selenium</group>
+    </exclude>
+  </groups>
+
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist='true'>
+      <directory>src/Fwlib/</directory>
+      <exclude>
+        <!-- Implement of PSR-0 is already test of ClassLoader -->
+        <file>src/Fwlib/Base/ClassLoader.php</file>
+        <!-- Base class PHPUnitTestCase should exclude from code coverage -->
+        <file>src/Fwlib/Bridge/PHPUnitTestCase.php</file>
+      </exclude>
+    </whitelist>
+  </filter>
+
+  <php>
+    <ini name='memory_limit' value='300m' />
+  </php>
+
+</phpunit>
