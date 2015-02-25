@@ -217,8 +217,6 @@ class PHPMailer extends OriginalPHPMailer
      * {@inheritdoc}
      *
      * Add set of sender too.
-     *
-     * @param   string  $sender
      */
     public function setFrom($address, $name = '', $auto = true)
     {
