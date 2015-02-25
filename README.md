@@ -5,5 +5,6 @@
 [![Latest Stable Version](https://poser.pugx.org/fwolf/phpmailer-wrapper/v/stable.svg)](https://packagist.org/packages/fwolf/phpmailer-wrapper)
 [![License](https://poser.pugx.org/fwolf/phpmailer-wrapper/license.svg)](https://packagist.org/packages/fwolf/phpmailer-wrapper)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/e0330125-7a91-49e9-b832-17e9f7f7e754/mini.png)](https://insight.sensiolabs.com/projects/e0330125-7a91-49e9-b832-17e9f7f7e754)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fwolf/phpmailer-wrapper/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fwolf/phpmailer-wrapper/?branch=master)
 
 Distribute under MIT License.
