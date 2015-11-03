@@ -1,30 +1,30 @@
 {
-  "name": "fwolf/phpmailer-wrapper",
-  "description": "Wrapper for easy use of PHPMailer",
-  "type": "library",
-  "keywords": [
-    "mail",
-    "wrapper"
-  ],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Fwolf",
-      "email": "fwolf.aide+PHPMailer-Wrapper@gmail.com"
+    "name": "fwolf/phpmailer-wrapper",
+    "description": "Wrapper for easy use of PHPMailer",
+    "type": "library",
+    "keywords": [
+        "mail",
+        "wrapper"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fwolf",
+            "email": "fwolf.aide+PHPMailer-Wrapper@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "phpmailer/phpmailer": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fwolf\\Wrapper\\PHPMailer\\": "src/PHPMailer/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FwolfTest\\Wrapper\\PHPMailer\\": "tests/PHPMailer/"
+        }
     }
-  ],
-  "require": {
-    "php": ">=5.5.0",
-    "phpmailer/phpmailer": "5.*"
-  },
-  "autoload": {
-    "psr-4": {
-      "Fwolf\\Wrapper\\PHPMailer\\": "src/PHPMailer/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "FwolfTest\\Wrapper\\PHPMailer\\": "tests/PHPMailer/"
-    }
-  }
 }
